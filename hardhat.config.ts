@@ -15,12 +15,12 @@ const networks: NetworksUserConfig = true
   : {
       hardhat: {
         forking: {
-          enabled: false,
-          url: process.env.RPC_GOERLI as string,
+          enabled: true,
+          url: process.env.RPC_ETH as string,
         },
       },
-      goerli: {
-        url: process.env.RPC_GOERLI,
+      mainnet: {
+        url: process.env.RPC_ETH,
         accounts: [process.env.PRIVATE_KEY_GOERLI as string],
       },
     };
@@ -76,7 +76,7 @@ const config: HardhatUserConfig = {
         },
       },
       {
-        version: '0.8.10',
+        version: '0.8.17',
         settings: {
           optimizer: {
             enabled: true,
